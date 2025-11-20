@@ -15,13 +15,54 @@ function createRandomUser() {
 
 let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), createRandomUser(), createRandomUser()]
 
-// console.log("user?")
-console.log(userArray)
-
 </script>
 
 <main>
   <p>Hello and welcome.</p>
+<div>
+    <table>
+        <thead>
+    {#each userArray as person}
+             <tr>
+                <th>
+                   {person['username']}
+             </th>
+            </tr>
+{/each}
+        <tr>
+            <th>
+                
+            </th>
+            <th>
+                t head 2
+            </th>
+            <th>
+                t head 3
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            
+            <td>1</td>
+            <td>11</td>
+            <td>111</td>
+        </tr>
+        <tr>
+            
+            <td>2</td>
+            <td>22</td>
+        </tr>
+        <tr>
+
+            <td>3</td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
 </main>
 
 <style>
