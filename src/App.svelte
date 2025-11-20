@@ -22,16 +22,21 @@ let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), cre
 <div>
     <table>
         <thead>
-    {#each userArray as person}
+    <!-- {#each userArray as person} -->
              <tr>
                 <th>
-                   {person['username']}
+                  userid
+                   <!-- {person['username']} -->
              </th>
+             <th>username</th>
+             <th>email</th>
+             <th>birthday</th>
             </tr>
-{/each}
+<!-- {/each} -->
+
         <tr>
             <th>
-                
+                {userArray[1]['username']}
             </th>
             <th>
                 t head 2
