@@ -16,12 +16,8 @@ function createRandomUser() {
 let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), createRandomUser(), createRandomUser()]
 
 function sortName(){
-  // console.log("start of sortname, users:", usersArray)
-    let sortedUserArray = [];
     userArray = userArray.sort(function (a, b){
-      // console.log("inside sortname, a b:", a, b)
       if (a.username < b.username){
-        // console.log("uysernme:", a.username)
         return -1;
       }
       if (a.username > b.username) {
@@ -29,9 +25,44 @@ function sortName(){
       }
       return 0;
     })
-    console.log("sorted users array:", sortedUserArray);
-    return sortedUserArray;
 }
+
+function sortEmail(){
+      userArray = userArray.sort(function (a, b){
+      if (a.email < b.email){
+        return -1;
+      }
+      if (a.email > b.email) {
+        return 1;
+      }
+      return 0;
+    })
+}
+
+function sortUserId(){
+      userArray = userArray.sort(function (a, b){
+      if (a.userId < b.userId){
+        return -1;
+      }
+      if (a.userId > b.userId) {
+        return 1;
+      }
+      return 0;
+    })
+}
+
+function sortBirthdate(){
+      userArray = userArray.sort(function (a, b){
+      if (a.birthdate < b.birthdate){
+        return -1;
+      }
+      if (a.birthdate > b.birthdate) {
+        return 1;
+      }
+      return 0;
+    })
+}
+
 
 </script>
 
@@ -40,35 +71,24 @@ function sortName(){
 <div>
     <table>
         <thead>
-    <!-- {#each userArray as person} -->
              <tr>
-                <th>
-                  User ID #
-                   <!-- {person['username']} -->
-             </th>
-             <th on:click={() => sortName(userArray)}>Username</th>
-             <th>Email</th>
-             <th>Birthday</th>
+                <th on:click={() => sortUserId()}> User ID # </th>
+                <th on:click={() => sortName()}>Username</th>
+                <th on:click={() => sortEmail()}>Email</th>
+                <th on:click={() => sortBirthdate()}>Birthday</th>
             </tr>
-<!-- {/each} -->
-            </thead>
-            <tbody>
-
+          </thead>
+        <tbody>
           {#each userArray as person}
-          
-         <tr>
-            <th>
-                {person['userId']}
-            </th>
-            <th>{person['username']}</th>
-            <th>{person['email']}</th>
-            <th>{person['birthdate']}</th>
+          <tr>
+          <th>{person['userId']}</th>
+          <th>{person['username']}</th>
+          <th>{person['email']}</th>
+          <th>{person['birthdate']}</th>
           </tr>  
           {/each}
-
-          
-            </tbody>
-</table>
+       </tbody>
+    </table>
 
 </div>
 </main>
