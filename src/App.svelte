@@ -37,15 +37,18 @@ let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), cre
             <tbody>
 
           {#each userArray as person}
+          
+         <tr>
             <th>
                 {person['userId']}
             </th>
             <th>{person['username']}</th>
             <th>{person['email']}</th>
             <th>{person['birthdate']}</th>
-            {/each}
-         <tr>
+          </tr>  
+          {/each}
 
+          
             </tbody>
 </table>
 
@@ -57,4 +60,5 @@ let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), cre
 table, thead, tr, tbody, th {
   border-style: solid;
 } 
+
 </style>
