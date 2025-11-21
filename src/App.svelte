@@ -15,17 +15,22 @@ function createRandomUser() {
 
 let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), createRandomUser(), createRandomUser()]
 
-function sortName(users){
-    let sortedUsersArray = [];
-    users.sort(function (a, b){
+function sortName(){
+  // console.log("start of sortname, users:", usersArray)
+    let sortedUserArray = [];
+    userArray = userArray.sort(function (a, b){
+      // console.log("inside sortname, a b:", a, b)
       if (a.username < b.username){
+        // console.log("uysernme:", a.username)
         return -1;
       }
-      if (a.username < b.username) {
+      if (a.username > b.username) {
         return 1;
       }
       return 0;
     })
+    console.log("sorted users array:", sortedUserArray);
+    return sortedUserArray;
 }
 
 </script>
@@ -41,7 +46,7 @@ function sortName(users){
                   User ID #
                    <!-- {person['username']} -->
              </th>
-             <th>Username</th>
+             <th on:click={() => sortName(userArray)}>Username</th>
              <th>Email</th>
              <th>Birthday</th>
             </tr>
