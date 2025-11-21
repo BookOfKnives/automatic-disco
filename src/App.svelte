@@ -33,22 +33,19 @@ let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), cre
              <th>birthday</th>
             </tr>
 <!-- {/each} -->
+            </thead>
+            <tbody>
 
-        <tr>
+            </tbody>
+          {#each userArray as person}
             <th>
-                {userArray[1]['username']}
+                {person['userId']}
             </th>
-            <th>
-                t head 2
-            </th>
-            <th>
-                t head 3
-            </th>
-
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
+            <th>{person['username']}</th>
+            <th>{person['email']}</th>
+            <th>{person['birthdate']}</th>
+            {/each}
+         <tr>
 
             
             <td>1</td>
