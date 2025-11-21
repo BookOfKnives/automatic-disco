@@ -25,12 +25,12 @@ let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), cre
     <!-- {#each userArray as person} -->
              <tr>
                 <th>
-                  userid
+                  User ID #
                    <!-- {person['username']} -->
              </th>
-             <th>username</th>
-             <th>email</th>
-             <th>birthday</th>
+             <th>Username</th>
+             <th>Email</th>
+             <th>Birthday</th>
             </tr>
 <!-- {/each} -->
             </thead>
@@ -60,5 +60,8 @@ let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), cre
 table, thead, tr, tbody, th {
   border-style: solid;
 } 
+tr:hover {
+  background-color: #44aa44;
+}
 
 </style>
