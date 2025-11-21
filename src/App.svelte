@@ -36,7 +36,6 @@ let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), cre
             </thead>
             <tbody>
 
-            </tbody>
           {#each userArray as person}
             <th>
                 {person['userId']}
@@ -47,26 +46,15 @@ let userArray = [createRandomUser(), createRandomUser(), createRandomUser(), cre
             {/each}
          <tr>
 
-            
-            <td>1</td>
-            <td>11</td>
-            <td>111</td>
-        </tr>
-        <tr>
-            
-            <td>2</td>
-            <td>22</td>
-        </tr>
-        <tr>
-
-            <td>3</td>
-        </tr>
-    </tbody>
+            </tbody>
 </table>
 
 </div>
 </main>
 
 <style>
-  
+
+table, thead, tr, tbody, th {
+  border-style: solid;
+} 
 </style>
